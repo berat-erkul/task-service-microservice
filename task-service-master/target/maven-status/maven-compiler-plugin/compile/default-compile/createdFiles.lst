@@ -1,5 +1,7 @@
 com/cydeo/config/KeycloakProperties.class
+com/cydeo/dto/Response/ProjectResponse.class
 com/cydeo/dto/wrapper/ValidationExceptionWrapper.class
+com/cydeo/client/UserClient.class
 com/cydeo/controller/TaskController.class
 com/cydeo/dto/wrapper/ResponseWrapper.class
 com/cydeo/enums/Status.class
@@ -10,6 +12,7 @@ com/cydeo/exception/UserNotFoundException.class
 com/cydeo/exception/ManagerNotRetrievedException.class
 com/cydeo/dto/wrapper/ResponseWrapper$ResponseWrapperBuilder.class
 com/cydeo/exception/ProjectAccessDeniedException.class
+com/cydeo/dto/responses/UserResponse$UserResponseBuilder.class
 com/cydeo/config/SecurityConfig.class
 com/cydeo/service/impl/TaskServiceImpl.class
 com/cydeo/exception/UserNotEmployeeException.class
@@ -17,12 +20,15 @@ com/cydeo/entity/Task.class
 com/cydeo/service/KeycloakService.class
 com/cydeo/exception/EmployeeCheckFailedException.class
 com/cydeo/service/impl/KeycloakServiceImpl.class
+com/cydeo/dto/Response/ProjectResponse$ProjectResponseBuilder.class
+com/cydeo/dto/responses/UserResponse.class
 com/cydeo/repository/TaskRepository.class
 com/cydeo/util/MapperUtil.class
 com/cydeo/config/OpenAPI3Configuration.class
 com/cydeo/exception/ProjectNotFoundException.class
 com/cydeo/exception/TaskAccessDeniedException.class
 com/cydeo/exception/TaskAlreadyExistsException.class
+com/cydeo/client/ProjectClient.class
 com/cydeo/TaskServiceApplication.class
 com/cydeo/dto/TaskDTO.class
 com/cydeo/util/SwaggerExamples.class
@@ -33,3 +39,4 @@ com/cydeo/dto/TaskDTO$TaskDTOBuilder.class
 com/cydeo/entity/BaseEntity.class
 com/cydeo/exception/ProjectCheckFailedException.class
 com/cydeo/dto/wrapper/ExceptionWrapper.class
+com/cydeo/client/interceptor/FeignClientInterceptor.class

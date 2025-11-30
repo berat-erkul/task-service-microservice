@@ -6,12 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "project-service", url = "http://localhost:8082/api/v1/project")
+@FeignClient(name = "project-service")
 public interface ProjectClient {
 
-    @GetMapping("/checks/{projectCode}")
+    @GetMapping("/api/v1/project/checks/{projectCode}")
     ResponseEntity<ProjectResponse> checkByProjectCode(@PathVariable ("projectCode") String projectCode);
 
-    @GetMapping("/read/manager/{projectCode}")
+    @GetMapping("/api/v1/project/read/manager/{projectCode}")
     ResponseEntity<ProjectResponse> getManagerByProject (@PathVariable ("projectCode") String projectCode);
 }
