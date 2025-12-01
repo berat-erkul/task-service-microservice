@@ -1,4 +1,4 @@
-package com.cydeo.dto.responses;
+package com.cydeo.dto.Response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

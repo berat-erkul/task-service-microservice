@@ -9,13 +9,17 @@
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/config/KeycloakProperties.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/enums/Status.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/dto/TaskDTO.java
+/Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/client/interceptor/FeignClientInterceptor.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/TaskAlreadyExistsException.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/ProjectNotFoundException.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/util/MapperUtil.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/TaskAccessDeniedException.java
+/Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/client/ProjectClient.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/repository/TaskRepository.java
+/Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/dto/Response/ProjectResponse.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/GlobalExceptionHandler.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/dto/wrapper/ExceptionWrapper.java
+/Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/client/UserClient.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/EmployeeCheckFailedException.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/entity/Task.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/UserNotEmployeeException.java
@@ -28,4 +32,5 @@
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/service/KeycloakService.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/config/SecurityConfig.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/service/impl/KeycloakServiceImpl.java
+/Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/dto/Response/UserResponse.java
 /Users/beraterkul/Desktop/CYDEO SPRİNG COURSE/Last Projects/MİCROSERVİCES PART/initial codes/task/task-service-master/src/main/java/com/cydeo/exception/UserNotFoundException.java

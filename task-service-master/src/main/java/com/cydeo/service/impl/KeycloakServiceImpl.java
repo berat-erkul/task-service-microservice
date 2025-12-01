@@ -29,12 +29,28 @@ public class KeycloakServiceImpl implements KeycloakService {
     @Override
     public String getAccessToken() {
         KeycloakAuthenticationToken keycloakAuthenticationToken = getAuthentication();
+        if (keycloakAuthenticationToken == null) {
+            throw new IllegalStateException("SecurityContext is empty. No authentication token available.");
+        }
+        if (keycloakAuthenticationToken.getAccount() == null) {
+            throw new IllegalStateException("KeycloakAccount is null. Authentication token is invalid.");
+        }
+        if (keycloakAuthenticationToken.getAccount().getKeycloakSecurityContext() == null) {
+            throw new IllegalStateException("KeycloakSecurityContext is null. Authentication token is invalid.");
+        }
         return "Bearer " + keycloakAuthenticationToken.getAccount().getKeycloakSecurityContext().getTokenString();
     }
 
     @Override
     public String getUsername() {
-        SimpleKeycloakAccount account = (SimpleKeycloakAccount) getAuthentication().getAccount();
+        KeycloakAuthenticationToken keycloakAuthenticationToken = getAuthentication();
+        if (keycloakAuthenticationToken == null) {
+            throw new IllegalStateException("SecurityContext is empty. No authentication token available.");
+        }
+        SimpleKeycloakAccount account = (SimpleKeycloakAccount) keycloakAuthenticationToken.getAccount();
+        if (account == null || account.getKeycloakSecurityContext() == null) {
+            throw new IllegalStateException("KeycloakAccount or KeycloakSecurityContext is null. Authentication token is invalid.");
+        }
         return account.getKeycloakSecurityContext().getToken().getPreferredUsername();
     }
 
@@ -77,7 +93,14 @@ public class KeycloakServiceImpl implements KeycloakService {
     }
 
     private KeycloakAuthenticationToken getAuthentication() {
-        return (KeycloakAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        var authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null) {
+            return null;
+        }
+        if (!(authentication instanceof KeycloakAuthenticationToken)) {
+            return null;
+        }
+        return (KeycloakAuthenticationToken) authentication;
     }
 
     private Keycloak getKeycloakInstance() {

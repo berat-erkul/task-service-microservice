@@ -3,6 +3,7 @@ package com.cydeo.service.impl;
 import com.cydeo.client.ProjectClient;
 import com.cydeo.client.UserClient;
 import com.cydeo.dto.Response.ProjectResponse;
+import com.cydeo.dto.Response.UserResponse;
 import com.cydeo.dto.TaskDTO;
 import com.cydeo.entity.Task;
 import com.cydeo.enums.Status;
@@ -14,7 +15,6 @@ import com.cydeo.util.MapperUtil;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
-import com.cydeo.dto.responses.UserResponse;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -98,8 +98,6 @@ public class TaskServiceImpl implements TaskService {
     public Map<String, Integer> getCountsByProject(String projectCode) {
 
         List<Task> tasks = taskRepository.findAllByProjectCode(projectCode);
-
-        tasks.forEach(this::checkAccess);
 
         int completedTaskCount = (int) tasks.stream().filter(task -> task.getTaskStatus().equals(Status.COMPLETED)).count();
         int nonCompletedTaskCount = (int) tasks.stream().filter(task -> !task.getTaskStatus().equals(Status.COMPLETED)).count();

@@ -1,6 +1,6 @@
 package com.cydeo.client;
 
-import com.cydeo.dto.responses.UserResponse;
+import com.cydeo.dto.Response.UserResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
