@@ -12,16 +12,15 @@ com/cydeo/exception/UserNotFoundException.class
 com/cydeo/exception/ManagerNotRetrievedException.class
 com/cydeo/dto/wrapper/ResponseWrapper$ResponseWrapperBuilder.class
 com/cydeo/exception/ProjectAccessDeniedException.class
-com/cydeo/dto/responses/UserResponse$UserResponseBuilder.class
 com/cydeo/config/SecurityConfig.class
 com/cydeo/service/impl/TaskServiceImpl.class
 com/cydeo/exception/UserNotEmployeeException.class
+com/cydeo/dto/Response/UserResponse$UserResponseBuilder.class
 com/cydeo/entity/Task.class
 com/cydeo/service/KeycloakService.class
 com/cydeo/exception/EmployeeCheckFailedException.class
 com/cydeo/service/impl/KeycloakServiceImpl.class
 com/cydeo/dto/Response/ProjectResponse$ProjectResponseBuilder.class
-com/cydeo/dto/responses/UserResponse.class
 com/cydeo/repository/TaskRepository.class
 com/cydeo/util/MapperUtil.class
 com/cydeo/config/OpenAPI3Configuration.class
@@ -39,4 +38,5 @@ com/cydeo/dto/TaskDTO$TaskDTOBuilder.class
 com/cydeo/entity/BaseEntity.class
 com/cydeo/exception/ProjectCheckFailedException.class
 com/cydeo/dto/wrapper/ExceptionWrapper.class
+com/cydeo/dto/Response/UserResponse.class
 com/cydeo/client/interceptor/FeignClientInterceptor.class

@@ -33,9 +33,11 @@ public class Task extends BaseEntity {
     @Column(nullable = false)
     private String projectCode;
 
+    // private User assignedEmployee;    User-> "String" username (key/unique) so we use String
     @Column(nullable = false)
     private String assignedEmployee;
 
+    // private User assignedManager;    User-> "String" username (key/unique) so we use String
     @Column(nullable = false)
     private String assignedManager;
 
