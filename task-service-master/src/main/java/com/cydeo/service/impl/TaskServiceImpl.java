@@ -99,6 +99,8 @@ public class TaskServiceImpl implements TaskService {
 
         List<Task> tasks = taskRepository.findAllByProjectCode(projectCode);
 
+        tasks.forEach(this::checkAccess);
+
         int completedTaskCount = (int) tasks.stream().filter(task -> task.getTaskStatus().equals(Status.COMPLETED)).count();
         int nonCompletedTaskCount = (int) tasks.stream().filter(task -> !task.getTaskStatus().equals(Status.COMPLETED)).count();
 
@@ -208,11 +210,11 @@ public class TaskServiceImpl implements TaskService {
         ResponseEntity<ProjectResponse> response = projectClient.checkByProjectCode(projectCode);
 
         if (!Objects.requireNonNull(response.getBody()).isSuccess()) {
-            throw new ProjectCheckFailedException("Project check is failed");
+            throw new ProjectCheckFailedException("Project check is failed.");
         }
 
         if (!Objects.requireNonNull(response.getBody()).getData().equals(true)) {
-            throw new ProjectNotFoundException("Project does not exist");
+            throw new ProjectNotFoundException("Project does not exist.");
         }
     }
 
@@ -221,15 +223,15 @@ public class TaskServiceImpl implements TaskService {
         ResponseEntity<UserResponse> response = userClient.checkByUsername(assignedEmployee);
 
         if (!Objects.requireNonNull(response.getBody()).isSuccess()) {
-            throw new ProjectCheckFailedException("Employee check is failed");
+            throw new EmployeeCheckFailedException("Employee check is failed.");
         }
 
         if (!Objects.requireNonNull(response.getBody()).getData().equals(true)) {
-            throw new ProjectNotFoundException("Employee does not exist");
+            throw new EmployeeNotFoundException("Employee does not exist.");
         }
 
-        if(!keycloakService.hasClientRole(assignedEmployee, "Employee")) {
-            throw new UserNotEmployeeException("User is not an employee");
+        if (!keycloakService.hasClientRole(assignedEmployee, "Employee")) {
+            throw new UserNotEmployeeException("User is not an employee.");
         }
 
     }
@@ -252,16 +254,14 @@ public class TaskServiceImpl implements TaskService {
 
         ResponseEntity<ProjectResponse> response = projectClient.getManagerByProject(projectCode);
 
-        if (!Objects.requireNonNull(response.getBody()).isSuccess()) {
+        if (Objects.requireNonNull(response.getBody()).isSuccess()) {
             String taskProjectManager = (String) response.getBody().getData();
             if (!loggedInUserUsername.equals(taskProjectManager)) {
-                throw new ProjectAccessDeniedException("Access is denied, make sure you are working on your own project.");
+                throw new ProjectAccessDeniedException("Access denied, make sure that you are working on your own project.");
             }
-
-        }else {
+        } else {
             throw new ManagerNotRetrievedException("Manager can not be retrieved.");
         }
-
 
     }
 

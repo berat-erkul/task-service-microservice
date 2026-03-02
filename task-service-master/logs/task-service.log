@@ -14,3 +14,6 @@
 [ ERROR] [45800] [2025-12-01 04:10:56.045] [http-nio-8383-exec-8] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
 [ ERROR] [45800] [2025-12-01 04:11:00.970] [http-nio-8383-exec-9] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
 [ ERROR] [45800] [2025-12-01 04:11:18.114] [http-nio-8383-exec-10] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
+[ ERROR] [4618] [2026-03-02 20:53:52.969] [http-nio-8383-exec-1] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
+[ ERROR] [4618] [2026-03-02 21:07:03.373] [http-nio-8383-exec-2] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
+[ ERROR] [4618] [2026-03-02 21:13:00.723] [http-nio-8383-exec-3] [com.cydeo.exception.GlobalExceptionHandler] - "javax.ws.rs.NotAuthorizedException: HTTP 401 Unauthorized"
