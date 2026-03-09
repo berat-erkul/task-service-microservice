@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: default
   cloud:
     config:
       name: task-service
@@ -7,3 +9,19 @@ spring:
       retry:
         max-attempts: 10
         max-interval: 2000
+
+  datasource:
+    url: ${TASK_DB_URL}
+    username: ${TASK_DB_USERNAME}
+    password: ${TASK_DB_PASSWORD}
+
+keycloak:
+  credentials:
+    secret: ${TASK_KEYCLOAK_CREDENTIALS}
+
+master:
+  user:
+    username: ${TASK_KEYCLOAK_MASTER_USERNAME}
+    password: ${TASK_KEYCLOAK_MASTER_PASSWORD}
+  realm: ${TASK_KEYCLOAK_MASTER_REALM}
+  client: ${TASK_KEYCLOAK_MASTER_CLIENT}
